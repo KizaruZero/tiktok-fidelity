@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiktok-fidelity"
+version = "0.1.0"
+description = "Local MP4 preparation and verification for preserving FPS, HDR and original media bitstreams on TikTok uploads."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "KizaruZero"}]
+license = {text = "MIT"}
+keywords = ["tiktok", "mp4", "fps", "hdr", "dolby-vision", "video", "metadata", "ffprobe"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+]
+
+[project.scripts]
+tiktok-fidelity = "tiktok_fidelity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
